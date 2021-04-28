@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(86, 114, 236);
+    background-image: url(../img/ben&Jerrys.jpg);
 }
 
 
@@ -104,9 +104,7 @@ body{
     text-align:left;
     margin-right: 4px;
   }
-  
-  
-  
+
   .columna1 {
       width: 100%;
       margin: 0;
