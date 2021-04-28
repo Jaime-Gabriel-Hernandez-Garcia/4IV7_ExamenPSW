@@ -29,6 +29,11 @@ body{
     -moz-transform: scale(1.5);
 }
 
+@font-face {
+  font-family: "C800";
+  src: url(../fuentes/C800.ttf);
+}
+
 .container::-webkit-scrollbar {
     width: 8px;
   }
@@ -58,6 +63,7 @@ body{
     background: #d4d4d4;
   }
   ul {
+    font-family: "C800";
     list-style-type: none;
     margin: 0;
     padding: 2px;
@@ -76,6 +82,7 @@ body{
   }
   
   li a {
+    font-family: "C800";
     display: block;
     color: white;
     text-align: center;
@@ -87,11 +94,10 @@ body{
   
   li a:hover {
     background-color:rgb(10, 96, 130);
-    color: rgb(23, 179, 9);
+    color: rgb(255, 255, 255);
   }
   
   .texto{
-    font-family: 'Comic Sans', sans-serif;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-weight: 445px;
@@ -124,6 +130,7 @@ body{
 
   footer{
   
+    font-family: "Thanks Autumn";
     height: fit-content;
     position:absolute;
     width: 100%;
