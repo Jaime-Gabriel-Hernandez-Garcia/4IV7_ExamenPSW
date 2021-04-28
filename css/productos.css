@@ -44,7 +44,7 @@ body{
   }
   
   .container::-webkit-scrollbar-thumb:hover {
-    background:  rgb(24, 24, 139);
+    background:  rgb(10, 96, 130);
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
   
@@ -62,7 +62,7 @@ body{
     margin: 0;
     padding: 2px;
     overflow: hidden;
-    background-color:rgb(27, 27, 99);
+    background-color:rgb(10, 96, 130);
     position: -webkit-sticky; 
     position: sticky;
     top: 0;
@@ -86,12 +86,12 @@ body{
   }
   
   li a:hover {
-    background-color:rgb(27, 27, 99);
+    background-color:rgb(10, 96, 130);
     color: rgb(23, 179, 9);
   }
   
   .texto{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Comic Sans', sans-serif;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-weight: 445px;
@@ -127,6 +127,6 @@ body{
     height: fit-content;
     position:absolute;
     width: 100%;
-    background: rgb(27, 27, 99);
+    background: rgb(35, 35, 39);
     text-align: left;
   }
