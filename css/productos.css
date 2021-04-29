@@ -3,6 +3,9 @@ body{
     background-image: url(../img/ben&Jerrys.jpg);
 }
 
+.referencia{
+  text-align: center;
+}
 
 .style_prevu_kit{
     display:inline-block;
@@ -34,6 +37,10 @@ body{
   src: url(../fuentes/C800.ttf);
 }
 
+.container{
+
+}
+
 .container::-webkit-scrollbar {
     width: 8px;
   }
@@ -62,6 +69,7 @@ body{
   .container::-webkit-scrollbar-track:active {
     background: #d4d4d4;
   }
+  
   ul {
     font-family: "C800";
     list-style-type: none;
@@ -78,6 +86,7 @@ body{
   
   li {
     float: left;
+    text-align: center;
   
   }
   
@@ -134,4 +143,24 @@ body{
     width: 100%;
     background: rgb(35, 35, 39);
     text-align: left;
+  }
+
+  .texto1{
+    text-align: center;
+    font-family: "C800";
+  }
+
+.label{
+    width: 64px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+
+.container-label{
+      border:5px solid rgb(255, 255, 255);
+      width:100%
+      box-sizing: border-box;
+      padding: 1rem;
   }
