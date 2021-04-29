@@ -45,7 +45,6 @@ body{
     width: 8px;
   }
   
-  
   .container::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 2px;
