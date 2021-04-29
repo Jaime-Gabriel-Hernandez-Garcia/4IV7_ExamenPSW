@@ -150,16 +150,17 @@ body{
   }
 
 .label{
-    width: 64px;
+  position: -ms-page;
+    width: 95%;
     background-color: rgb(255, 255, 255);
-    color: white;
+    color: black;
     padding: 1rem;
     border-radius: 20px;
     text-align: center;
 
 .container-label{
       border:5px solid rgb(255, 255, 255);
-      width:100%
+      width:50%
       box-sizing: border-box;
       padding: 1rem;
   }
