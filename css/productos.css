@@ -1,0 +1,166 @@
+
+body{
+    background-image: url(../img/ben&Jerrys.jpg);
+}
+
+.referencia{
+  text-align: center;
+}
+
+.style_prevu_kit{
+    display:inline-block;
+    border:0;
+    width: 196px;
+    height: 210px;
+    position: relative;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1);
+}
+
+.style_prevu_kit:hover{
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-out;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-out;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-out;
+    -moz-transform: scale(1.5);
+}
+
+@font-face {
+  font-family: "C800";
+  src: url(../fuentes/C800.ttf);
+}
+
+.container{
+
+}
+
+.container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 2px;
+  }
+  
+  .container::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  .container::-webkit-scrollbar-thumb:hover {
+    background:  rgb(10, 96, 130);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 2px;
+  }
+  
+  .container::-webkit-scrollbar-track:hover, 
+  .container::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+  
+  ul {
+    font-family: "C800";
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    overflow: hidden;
+    background-color:rgb(10, 96, 130);
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size:3.5vh;
+  }
+  
+  li {
+    float: left;
+    text-align: center;
+  
+  }
+  
+  li a {
+    font-family: "C800";
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+  
+  li a:hover {
+    background-color:rgb(10, 96, 130);
+    color: rgb(255, 255, 255);
+  }
+  
+  .texto{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 445px;
+    text-align:left;
+    margin-right: 4px;
+  }
+
+  .columna1 {
+      width: 100%;
+      margin: 0;
+    }
+    
+    @media (min-width: 600px) {
+      .columna1 {
+        padding: 20px;
+        font-size: 1.5em;
+      }
+  
+    }
+    
+    @media (min-width: 800px) {
+  .columna1 { 
+        padding: 40px;
+        font-size: 1em;
+  }
+  
+  }
+
+  footer{
+  
+    font-family: "Thanks Autumn";
+    height: fit-content;
+    position:absolute;
+    width: 100%;
+    background: rgb(35, 35, 39);
+    text-align: left;
+  }
+
+  .texto1{
+    text-align: center;
+    font-family: "C800";
+  }
+
+.label{
+  position: -ms-page;
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+
+.container-label{
+      border:5px solid rgb(255, 255, 255);
+      width:50%
+      box-sizing: border-box;
+      padding: 1rem;
+  }
