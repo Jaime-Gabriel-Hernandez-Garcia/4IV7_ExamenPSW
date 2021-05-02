@@ -34,17 +34,18 @@
                 con = DriverManager.getConnection(url, userName, password);
                 
                 try{
-                    String nombre, sabor, estado, q;
-                    int cantidad;
+                    String nombre, sabor, estado,q;
+                    int cantidad, precio;
                     nombre = request.getParameter("nombre");
                     cantidad = Integer.parseInt(request.getParameter("cantidad"));
                     sabor = request.getParameter("sabor");
                     estado = request.getParameter("estado");
+                    precio = Integer.parseInt(request.getParameter("precio"));
                     
                     set = con.createStatement();
                     
-                    q = "insert into mproducto(nom_pro, can_pro, sab_pro, est_pro)"
-                            + "values ('"+nombre+"', '"+cantidad+"', '"+sabor+"', '"+estado+"' )";
+                    q = "insert into mproducto(nom_pro, can_pro, sab_pro, est_pro, pre_pro)"
+                            + "values ('"+nombre+"', '"+cantidad+"', '"+sabor+"', '"+estado+"', '"+precio+"' )";
                     
                     int registro = set.executeUpdate(q);
                     

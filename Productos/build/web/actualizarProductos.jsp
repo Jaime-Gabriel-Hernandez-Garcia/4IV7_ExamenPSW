@@ -1,6 +1,6 @@
 <%-- 
-    Document   : editar
-    Created on : 30/04/2021, 04:56:55 PM
+    Document   : borrar
+    Created on : 30/04/2021, 04:48:21 PM
     Author     : demon
 --%>
 
@@ -9,97 +9,76 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Actualizar Cuenta</title>
+        <title>Borrar Registro</title>
     </head>
     <body>
-        <h1>Tabla de Datos de la Cuenta</h1>
-        <form method="post" name="formularioeditar" action="actualizar.jsp" >
-            <table border="2" >
-                
-                <%
-                    Connection con = null;
-                    Statement set = null;
-                    ResultSet rs = null;
-                    String url, userName, password, driver;
-                    url = "jdbc:mysql://localhost/Productos";
-                    userName = "root";
-                    password = "22mayo2004";
-                    driver = "com.mysql.jdbc.Driver";
-                    try{
-                        Class.forName(driver);
-                        con = DriverManager.getConnection(url, userName, password);
-                        try{
-                            int id = Integer.parseInt(request.getParameter("id"));
-                            String q = "select id_usu, nom_usu, can_pro, est_usu from registro "
-                                     + "where id_usu ="+id;
-                            
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){
-                                %>
-            <tr>
-                    <td>ID</td>
-                    <td> <input type="hidden" name="id2" value="<%=rs.getInt("id_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Nombre:</td>
-                    <td> <input type="text" name="nombre2" value="<%=rs.getString("nom_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Ciudad</td>
-                    <td> <input type="text" name="ciudad2" value="<%=rs.getString("ciu_usu")%>" > </td>
-                </tr>
-                <tr>
-                    <td>Telefono:</td>
-                    <td> <input type="text" name="tel2" value="<%=rs.getString("tel_usu")%>" > </td>
-                </tr>                    
-                                <%
-                            
-                            }
-                            rs.close();
-                            set.close();
-                        
-                        }catch(SQLException ed){
-                            System.out.println("Error al consultar la tabla");
-                            System.out.println(ed.getMessage());
-                            %>
-                <tr>
-                    <td>ID</td>
-                    <td> <input type="hidden" name="id2" value="" > </td>
-                </tr>
-                <tr>
-                    <td>Nombre:</td>
-                    <td> <input type="text" name="nombre2" value="" > </td>
-                </tr>
-                <tr>
-                    <td>Ciudad</td>
-                    <td> <input type="text" name="ciudad2" value="" > </td>
-                </tr>
-                <tr>
-                    <td>Telefono:</td>
-                    <td> <input type="text" name="tel2" value="" > </td>
-                </tr>            
-                            <%
-                        
-                        }
-                        con.close();
+        
+        <% 
+            Connection con = null;
+            Statement set = null;
+            ResultSet rs = null;
+            String url, userName, password, driver;
+            url = "jdbc:mysql://localhost/Productos";
+            userName = "root";
+            password = "22mayo2004";
+            driver = "com.mysql.jdbc.Driver";
+            
+            try{
+                Class.forName(driver);
+                con = DriverManager.getConnection(url, userName, password);
+                try{
+                    String nombre2, sabor2, estado2, q;
+                    int cantidad2, precio2;
                     
-                    }catch(Exception e){
-                        System.out.println("Error al conectar con la bd");
-                        System.out.println(e.getMessage());
-                        System.out.println(e.getStackTrace());
+                    nombre2 = request.getParameter("nombreNuevo");
+                    cantidad2 = Integer.parseInt(request.getParameter("cantidadNueva"));
+                    sabor2 = request.getParameter("saborNuevo");
+                    estado2 = request.getParameter("estadoNuevo");
+                    precio2 = Integer.parseInt(request.getParameter("precioNuevo"));
+                    
+                    int id = Integer.parseInt(request.getParameter("idAct"));
+
+                    q = "update mproducto set nom_pro = '" + nombre2 + 
+                        "', can_pro = '" + cantidad2 + 
+                        "', est_pro = '" + estado2 + 
+                        "',sab_pro = '" + sabor2 + 
+                        "', pre_pro = ' " + precio2 + 
+                        "', where id_pro = " + id ;
+                    
+                    set = con.createStatement();
+                    int Actualizar = set.executeUpdate(q);
+                    
+                    %>
+            <h1>Registro Actualizado con Exito</h1>        
+                    <%
+                    set.close();
+                
+                }catch(SQLException ed){
+                    System.out.println("Error al borrar el registro de la tabla");
+                    System.out.println(ed.getMessage());
+                    %>
+            <h1>Registro No Actualizado con Exito, error en el recurso, solo juguito again</h1>        
+                    <%
+                        
+                }
+                con.close();
+                
+            
+            }catch(Exception e){
+                System.out.println("Error al conectar con la bd");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
                 %>
         <h1>Sitio en Construcción</h1>            
                     <%
-                    
-                    }
-                    %>
-                
-                
-            </table>
-                    <input type="submit" value="Actualizar Registo" >
-                    <input type="reset" value="Borrar Datos" >
             
-        </form>
+            }
+            %>
+        
+        <br>
+                    <a href="index.html" >Regresar al Menú Principal</a>
+                    <br>
+                    <a href="consultarProductos.jsp" >Consulta de Tabla General de Usuarios</a> 
+        
     </body>
 </html>
