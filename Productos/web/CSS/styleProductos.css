@@ -1,0 +1,34 @@
+.tituloNav{
+    text-align: center;
+    background-color: lightgreen;
+    padding: 2rem;
+}
+
+.registroPro{
+        position: relative;
+        margin-left: 30rem; 
+        align-content: center;
+}
+
+.nomInp{
+    margin-right: 2rem;
+}
+.nomEti{
+    margin-right: 2rem;
+}
+.cantEti{
+    margin-right: 4rem;
+}
+.sabEti{
+    margin-right: 4rem;
+}
+.SubirInp{
+    margin-left: 16rem;
+}
+
+.DispRad{
+    margin-left: 4rem;
+}
+.AgotRad{
+    margin-left: 4rem;
+}

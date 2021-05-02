@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Datos Productos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/styleProductos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="tituloNav">
+            <h1>Administración Productos</h1>
+        </nav>
+        <div>
+            <div class="registroPro">
+                <form method="post" name="formularioregistro" action="registrarProducto.jsp">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="image" name="imagenHelado" >
+                    <br>
+                    <br>
+                    <br>
+                    <label class="nomEti"> Nombre del producto:</label>
+                    <input class="nomInp" type="text" name="nombre" size="30">   
+                    <br>
+                    <br>
+                    <br>
+                    <label class="cantEti">Cantidad gramos:</label>
+                    <input class="cantInp" type="number" name="cantidad" size="30">
+                    <br>
+                    <br>
+                    <br>
+                    <label class="sabEti"> Sabor de Helado</label>
+                    <input class="sabInp" type="text" name="sabor" size="30">
+                    <br>
+                    <br>
+                    <br>
+                    <label>Estado del producto:</label>
+                    <input class="DispRad" type="radio" name="estado" value="Disponible"> Disponible
+                    <input class="AgotRad" type="radio" name="estado" value="Agotado" checked> Agotado
+                    <br>
+                    <br>
+                    <br>
+                    <input class="SubirInp" type="submit" value="Subir Datos">
+                </form>           
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+             <a href="consultarProductos.jsp" >Consulta de Tabla General de Productos</a>
+        </div>
+    </body>
+</html>
