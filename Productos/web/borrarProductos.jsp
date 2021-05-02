@@ -27,12 +27,11 @@
                 Class.forName(driver);
                 con = DriverManager.getConnection(url, userName, password);
                 try{
-                    int id = Integer.parseInt(request.getParameter("id"));
+                    int id = Integer.parseInt(request.getParameter("idborrar"));
                     
-                    String q = "detele from MProductos where id_usu = "+id;
+                    String q = "delete from mproducto where id_pro = " + id;
                     
                     set = con.createStatement();
-                    
                     int borrar = set.executeUpdate(q);
                     
                     %>
@@ -64,7 +63,7 @@
         <br>
                     <a href="index.html" >Regresar al Menú Principal</a>
                     <br>
-                    <a href="consultar.jsp" >Consulta de Tabla General de Usuarios</a> 
+                    <a href="consultarProductos.jsp" >Consulta de Tabla General de Usuarios</a> 
         
     </body>
 </html>

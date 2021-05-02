@@ -35,6 +35,11 @@ and open the template in the editor.
                     <br>
                     <br>
                     <br>
+                    <label class="precioEti" style="margin-right: 3rem;">Precio del producto</label>
+                    <input class="precioInp" type="number" name="precio" size="30">
+                    <br>
+                    <br>
+                    <br>
                     <label class="sabEti"> Sabor de Helado</label>
                     <input class="sabInp" type="text" name="sabor" size="30">
                     <br>
@@ -47,13 +52,84 @@ and open the template in the editor.
                     <br>
                     <br>
                     <input class="SubirInp" type="submit" value="Subir Datos">
-                </form>           
+                    <br>
+                    <br>
+                    <input class="actualizarInp" type="submit" value="Actualizar Datos" action="actualizarProductos.jsp"
+                           style="margin-left: 15.2rem;">
+                    <br>
+                    <br>
+                </form>    
+            </div>
+            <h1 class="tituloBorrar">Borrar Productos</h1>
+            <div class="formBorrar">
+                <form method="post" name="formularioregistro" action="borrarProductos.jsp">
+                    <br>
+                    <br>
+                    <br>
+                    <label>Ingresa el ID del producto que va a eliminar</label>
+                    <br>
+                    <br>
+                    <input class="borrarInp" type="number" name="idborrar" size="30">
+                    <br>
+                    <br>
+                    <br> 
+                    <input class="borrarBot" type="submit" value="Borrar producto">
+                    <br>
+                    <br>
+                    <br>
+                </form>
+            </div>
+            <h1 class="tituloActualizar">Actualiar Productos</h1>
+            <div class="formActualizar">
+                <form method="post" name="formularioregistro" action="actualizarProductos.jsp">
+                    <br>
+                    <br>
+                    <br>
+                    <input type="image" name="imagenHelado" >
+                    <br>
+                    <br>
+                    <br>
+                    <label class="idEti"> ID del producto:</label>
+                    <input class="idInp" type="number" name="idAct" size="30" style="margin-left: 4rem;">   
+                    <br>
+                    <br>
+                    <br>
+                    <label class="nomEti"> Nombre del producto:</label>
+                    <input class="nomInp" type="text" name="nombreNuevo" size="30">   
+                    <br>
+                    <br>
+                    <br>
+                    <label class="cantEti">Cantidad gramos:</label>
+                    <input class="cantInp" type="number" name="cantidadNueva" size="30">
+                    <br>
+                    <br>
+                    <br>
+                    <label class="precioEti" style="margin-right: 3rem;">Precio del producto</label>
+                    <input class="precioInp" type="number" name="precioNuevo" size="30">
+                    <br>
+                    <br>
+                    <br>
+                    <label class="sabEti"> Sabor de Helado</label>
+                    <input class="sabInp" type="text" name="saborNuevo" size="30">
+                    <br>
+                    <br>
+                    <br>
+                    <label>Estado del producto:</label>
+                    <input class="DispRad" type="radio" name="estadoNuevo" value="Disponible"> Disponible
+                    <input class="AgotRad" type="radio" name="estadoNuevo" value="Agotado" checked> Agotado
+                    <br>
+                    <br>
+                    <br>  
+                    <input class="actualizarInp" type="submit" value="Actualizar Datos" action="actualizarProductos.jsp"
+                           style="margin-left: 15.2rem;">
+                    <br>
+                    <br>
+                </form>
             </div>
             <br>
             <br>
             <br>
-            <br>
-             <a href="consultarProductos.jsp" >Consulta de Tabla General de Productos</a>
+            <a href="consultarProductos.jsp" >Consulta de Tabla General de Productos</a>
         </div>
     </body>
 </html>

@@ -22,7 +22,7 @@
                     <th>Cantidad</th>
                     <th>Sabor</th>
                     <th>Estado</th>
-                    <th>Editar</th>
+                    <th>Precio</th>
                 </tr>
             </thead>
             <tbody> 
@@ -56,7 +56,7 @@
                     <td> <%=rs.getString("can_pro")%> </td>
                     <td> <%=rs.getString("sab_pro")%> </td>
                     <td> <%=rs.getString("est_pro")%> </td>
-                    
+                    <td> <%=rs.getString("pre_pro")%> </td>
                 </tr>
 
 

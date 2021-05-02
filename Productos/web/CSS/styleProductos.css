@@ -1,7 +1,8 @@
 .tituloNav{
     text-align: center;
     background-color: lightgreen;
-    padding: 2rem;
+    padding: 1rem;
+    font-size: 6mm;
 }
 
 .registroPro{
@@ -25,10 +26,38 @@
 .SubirInp{
     margin-left: 16rem;
 }
+.precioEti{
+    margin-right: 2rem;
+}
+
 
 .DispRad{
     margin-left: 4rem;
 }
 .AgotRad{
     margin-left: 4rem;
+}
+
+.tituloBorrar{
+    background-color: lightcoral;
+    padding: 2rem;
+    text-align: center;
+}
+
+.formBorrar{
+    margin-left: 35rem;
+}
+.borrarInp{
+    margin-left: 3rem;
+}
+.borrarBot{
+    margin-left: 5rem;
+}
+.tituloActualizar{
+    background-color: lightskyblue;
+    padding: 2rem;
+    text-align: center;
+}
+.formActualizar{
+    margin-left: 35rem;
 }
